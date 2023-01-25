@@ -1,37 +1,42 @@
 import mongoose from "mongoose";
+import { v4 as uuid } from 'uuid'
 
 const projectSchema = new mongoose.Schema({
+    uuid: {
+        type: String,
+        default: uuid()
+    },
     name: {
         type: String,
-        required: true,
+        required: true
     },
     description: {
         type: String,
-        required: true,
+        required: true
     },
     image: {
         type: String,
-        required: true,
+        required: true
     },
-    link: {
+    deploy: {
         type: String,
-        required: true,
+        required: true
     },
-    github: {
+    repository: {
         type: String,
-        required: true,
+        required: true
     },
     tags: {
         type: [String],
-        required: true,
+        required: true
     },
     addedAt: {
         type: Date,
-        default: Date.now,
+        default: Date.now
     },
     lastEdit: {
         type: Date,
-        default: Date.now,
+        default: Date.now
     }
 });
 
