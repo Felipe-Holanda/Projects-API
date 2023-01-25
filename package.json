@@ -1,0 +1,20 @@
+{
+  "name": "felipeholanda.dev",
+  "version": "0.1.0",
+  "description": "Backend service to deploy on Heroku",
+  "main": "server.js",
+  "author": "Felipe Holanda",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.8.4",
+    "uuid": "^9.0.0",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20",
+    "sucrase": "^3.29.0"
+  }
+}
