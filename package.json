@@ -1,7 +1,7 @@
 {
   "name": "felipeholanda.dev",
   "version": "0.1.0",
-  "description": "Backend service to deploy on Heroku",
+  "description": "This API was developed to store projects to make it easier to manage my portfolio. It was developed using NodeJS, Express, MongoDB and Mongoose.",
   "main": "server.js",
   "author": "Felipe Holanda",
   "license": "MIT",
@@ -9,12 +9,19 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
     "mongoose": "^6.8.4",
+    "reflect-metadata": "^0.1.13",
     "uuid": "^9.0.0",
     "yup": "^0.32.11"
   },
   "devDependencies": {
     "nodemon": "^2.0.20",
     "sucrase": "^3.29.0"
+  },
+  "scripts": {
+    "dev": "nodemon src/server.js --exec sucrase-node",
+    "start": "node dist/server.js",
+    "build": "sucrase src -d dist --transforms imports,typescript,jsx"
   }
 }
